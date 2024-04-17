@@ -124,7 +124,7 @@
     margin: auto;
 }
 
-.slide {
+.slide1 {
     display: none;
 }
 
@@ -144,6 +144,12 @@ img.bordo {
 
 /**/
 
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
 .slide2 {
     display: none;
 }
@@ -161,6 +167,8 @@ img.bordo {
 img.bordo {
     border: 2px solid black;
 }
+
+
 
 </style>
 
@@ -256,7 +264,7 @@ IKEA;<br>
         showSlides();
 
         function showSlides() {
-            let slides = document.getElementsByClassName("slide");
+            let slides = document.getElementsByClassName("slide1");
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
@@ -275,6 +283,24 @@ IKEA;<br>
 
     function showSlides() {
         let slides = document.getElementsByClassName("slide2");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000);
+    }
+</script>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
