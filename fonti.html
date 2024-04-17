@@ -116,6 +116,29 @@
 }
 
 
+/**/
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/**/
 
 </style>
 
@@ -155,6 +178,20 @@ IKEA;<br>
 <br>
 
     </p>
+
+
+
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="slide1.png" alt="Image 1">
+        </div>
+        <div class="slide fade">
+            <img src="slide2.png" alt="Image 2">
+        </div>
+        <div class="slide fade">
+            <img src="slide3.png" alt="Image 2">
+        </div>
+    </div>
 
 
 
